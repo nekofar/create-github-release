@@ -1,15 +1,25 @@
 #!/bin/bash
 
-# Bail on first non-zero exist status, and bail any referenced variable is unset.
+# Bail on first non-zero exit status, and bail if any referenced variable is unset.
 set -eux
 
-# Clear the GITHUB_TOKEN environment variable
-unset GITHUB_TOKEN
+# Function to add non-empty arguments to the array
+function add_argument {
+  if [ -n "$1" ]; then
+    arguments+=("$2")
+  fi
+}
 
-# Check if both title, notes and notes file are not provided.
+# Check for missing required parameters
+if [ -z "$INPUT_TAG" ]; then
+  echo "Error: 'tag' input is required but not provided."
+  exit 1
+fi
+
+# Check if both title, notes, and notes file are not provided.
 generate_notes_flag=""
 if [[ -z "$INPUT_TITLE" && -z "$INPUT_NOTES" && -z "$INPUT_NOTES_FILE" ]]; then
- generate_notes_flag="--generate-notes"
+  generate_notes_flag="--generate-notes"
 fi
 
 # Check if draft, prerelease, and latest options are set to true.
@@ -17,36 +27,33 @@ draft_flag=$([ "$INPUT_DRAFT" = "true" ] && echo "--draft" || echo "")
 prerelease_flag=$([ "$INPUT_PRERELEASE" = "true" ] && echo "--prerelease" || echo "")
 latest_flag=$([ "$INPUT_LATEST" = "true" ] && echo "--latest" || echo "")
 
-# Check if discussion_category is provided.
-discussion_category_flag=""
-if [ -n "$INPUT_DISCUSSION_CATEGORY" ]; then
- discussion_category_flag="--discussion-category $INPUT_DISCUSSION_CATEGORY"
-fi
-
 # Use the provided token or GITHUB_TOKEN for authentication
 gh auth login --with-token <<< "$INPUT_TOKEN"
 
 # Prepare the arguments for gh release create command
 arguments=()
 
-# Check if title is provided.
-if [ -n "$INPUT_TITLE" ]; then
- arguments+=("--title" "$INPUT_TITLE")
-fi
-
-# Check if notes file is provided.
-if [ -n "$INPUT_NOTES_FILE" ]; then
- arguments+=("--notes-file" "$INPUT_NOTES_FILE")
-elif [ -n "$INPUT_NOTES" ]; then
- printf -v formatted_notes '%q' "$INPUT_NOTES"
- arguments+=("--notes" "$formatted_notes")
-fi
-
 # Append optional flags to the arguments array
-arguments+=("$draft_flag" "$prerelease_flag" "$latest_flag" "$discussion_category_flag" "$generate_notes_flag")
+add_argument "$draft_flag" "$draft_flag"
+add_argument "$prerelease_flag" "$prerelease_flag"
+add_argument "$latest_flag" "$latest_flag"
+add_argument "$generate_notes_flag" "$generate_notes_flag"
 
 # Append tag and files to the arguments array
-arguments+=("$INPUT_TAG" "$INPUT_FILES")
+add_argument "$INPUT_TAG" "$INPUT_TAG"
+add_argument "$INPUT_FILES" "$INPUT_FILES"
+
+# Check if title is provided and add it to the arguments array
+add_argument "$INPUT_TITLE" "--title $INPUT_TITLE"
+
+# Check if notes file is provided and add it to the arguments array
+add_argument "$INPUT_NOTES_FILE" "--notes-file $INPUT_NOTES_FILE"
+
+# Check if release notes are provided and add them to the arguments array
+add_argument "$INPUT_NOTES" "--notes $INPUT_NOTES"
+
+# Check if discussion_category is provided.
+add_argument "$INPUT_DISCUSSION_CATEGORY" "--discussion-category $INPUT_DISCUSSION_CATEGORY"
 
 # Create the GitHub release with the specified arguments
 gh release create "${arguments[@]}"

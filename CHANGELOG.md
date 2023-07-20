@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.9] - 2023-07-20
+
+### <!-- 04 -->Refactor
+
+- Update notes file variable for clarity
+- Update release flags-checking in `entrypoint.sh`
+
 ## [1.0.0-alpha.8] - 2023-07-20
 
 ### <!-- 04 -->Refactor

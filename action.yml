@@ -50,4 +50,3 @@ runs:
               INPUT_LATEST: ${{ inputs.latest }}
               INPUT_PRERELEASE: ${{ inputs.prerelease }}
               INPUT_DISCUSSION_CATEGORY: ${{ inputs.discussion_category }}
-

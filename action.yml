@@ -32,11 +32,12 @@ inputs:
     token:
         description: 'GitHub token to authenticate with the repository. Default: ${{ github.token }}'
         required: false
-        default: ${{ github.token }}
+
 runs:
     using: 'composite'
     steps:
         - run: 'entrypoint.sh'
+          shell: 'bash'
           env:
               INPUT_TOKEN: ${{ inputs.token }}
               INPUT_TAG: ${{ inputs.tag }}

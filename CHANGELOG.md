@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.14] - 2023-07-20
+
+### <!-- 07 -->Continuous Integrations
+
+- Update actions/checkout version in GitHub workflow
+- Update release tag and title in Github Workflow
+
 ## [1.0.0-alpha.13] - 2023-07-20
 
 ### <!-- 02 -->Bug Fixes

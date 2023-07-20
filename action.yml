@@ -30,8 +30,9 @@ inputs:
         description: 'Optional discussion category for the release'
         required: false
     token:
-        description: 'GitHub token to authenticate with the repository. Default: ${{ github.token }}'
+        description: 'GitHub token to authenticate with the repository.'
         required: false
+        default: ${{ github.token }}
 
 runs:
     using: 'composite'

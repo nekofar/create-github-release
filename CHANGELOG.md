@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.2] - 2023-07-20
+
+### <!-- 07 -->Continuous Integrations
+
+- Add GitHub action to create release
+
 ## [1.0.0-alpha.1] - 2023-07-20
 
 ### <!-- 05 -->Documentation

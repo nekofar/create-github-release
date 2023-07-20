@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.20] - 2023-07-20
+
+### <!-- 04 -->Refactor
+
+- Update variable names to follow underscore naming convention
+- Remove extra newline from `action.yml`
+
+### <!-- 07 -->Continuous Integrations
+
+- Remove unnecessary commands from release workflow
+- Add step to print changelog in release workflow
+- Update notes file key in GitHub release workflow
+- Update release notes configuration in workflow
+
 ## [1.0.0-alpha.19] - 2023-07-20
 
 ### <!-- 07 -->Continuous Integrations

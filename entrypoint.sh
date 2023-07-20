@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Bail on first non-zero exist status, and bail any referenced variable is unset.
-set -eu
+set -eux
 
 # Clear the GITHUB_TOKEN environment variable
 unset GITHUB_TOKEN

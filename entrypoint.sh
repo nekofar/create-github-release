@@ -8,7 +8,7 @@ unset GITHUB_TOKEN
 
 # Check if both title and notes are not provided, then use --generate-notes flag
 generate_notes_flag=""
-if [[ -z "$INPUT_TITLE" && -z "$INPUT_NOTES" && -z "$INPUT_NOTESFILE" ]]; then
+if [[ -z "$INPUT_TITLE" && -z "$INPUT_NOTES" && -z "$INPUT_NOTES_FILE" ]]; then
   generate_notes_flag="--generate-notes"
 fi
 
@@ -45,8 +45,8 @@ if [ -n "$INPUT_TITLE" ]; then
 fi
 
 # Append --notes-file flag if notesFile is provided
-if [ -n "$INPUT_NOTESFILE" ]; then
-  arguments+=("--notes-file" "$INPUT_NOTESFILE")
+if [ -n "$INPUT_NOTES_FILE" ]; then
+  arguments+=("--notes-file" "$INPUT_NOTES_FILE")
 elif [ -n "$INPUT_NOTES" ]; then
   # Append --notes flag with the provided release notes to the arguments
   printf -v formatted_notes '%q' "$INPUT_NOTES"

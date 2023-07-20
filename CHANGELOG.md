@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.7] - 2023-07-20
+
+### <!-- 02 -->Bug Fixes
+
+- Clear `GITHUB_TOKEN` env var in `entrypoint.sh` script
+
+### <!-- 05 -->Documentation
+
+- Add warning note to README
+
 ## [1.0.0-alpha.6] - 2023-07-20
 
 ### <!-- 02 -->Bug Fixes

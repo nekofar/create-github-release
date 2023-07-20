@@ -33,6 +33,8 @@ jobs:
           tag: ${{ github.ref_name }}
           files: cliff.toml
           title: ${{ github.ref_name }}
-          notes_file: CHANGES.md
+          notes: |
+            This is the release notes for version ${{ github.ref }}.
+            Add any important information here.
           draft: true
           prerelease: ${{ contains(github.ref_name, '-rc') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-alpha') }}

@@ -45,7 +45,6 @@ jobs:
         with:
           token: ${{ github.token }}
           tag: ${{ github.ref_name }}
-          files: cliff.toml
           title: ${{ github.ref_name }}
           notes_file: CHANGES.md
           draft: true

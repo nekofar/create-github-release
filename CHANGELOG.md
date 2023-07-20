@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-beta.2] - 2023-07-20
+
+### <!-- 07 -->Continuous Integrations
+
+- Remove cliff.toml from release workflow
+
 ## [1.0.0-beta.1] - 2023-07-20
 
 ### <!-- 07 -->Continuous Integrations

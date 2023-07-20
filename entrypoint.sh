@@ -47,16 +47,20 @@ add_argument "$INPUT_TAG" "$INPUT_TAG"
 add_argument "$INPUT_FILES" "$INPUT_FILES"
 
 # Check if title is provided and add it to the arguments array
-add_argument "$INPUT_TITLE" "--title $INPUT_TITLE"
+add_argument "$INPUT_TITLE" "--title"
+add_argument "$INPUT_TITLE" "$INPUT_TITLE"
 
 # Check if notes file is provided and add it to the arguments array
-add_argument "$INPUT_NOTES_FILE" "--notes-file $INPUT_NOTES_FILE"
+add_argument "$INPUT_NOTES_FILE" "--notes-file"
+add_argument "$INPUT_NOTES_FILE" "$INPUT_NOTES_FILE"
 
 # Check if release notes are provided and add them to the arguments array
-add_argument "$INPUT_NOTES" "--notes $INPUT_NOTES"
+add_argument "$INPUT_NOTES" "--notes"
+add_argument "$INPUT_NOTES" "$INPUT_NOTES"
 
 # Check if discussion_category is provided.
-add_argument "$INPUT_DISCUSSION_CATEGORY" "--discussion-category $INPUT_DISCUSSION_CATEGORY"
+add_argument "$INPUT_DISCUSSION_CATEGORY" "--discussion-category"
+add_argument "$INPUT_DISCUSSION_CATEGORY" "$INPUT_DISCUSSION_CATEGORY"
 
 # Create the GitHub release with the specified arguments
 gh release create "${arguments[@]}"

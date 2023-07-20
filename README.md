@@ -8,6 +8,9 @@
 
 GitHub Action to create a new release with optional notes and files.
 
+> **Warning**
+> Please note this is an experimental project and is currently under development. As such, it may not be suitable for use in production environments. Use at your own risk and discretion.
+
 ## Inputs
 
 ### `tag` (required)

@@ -28,7 +28,7 @@ jobs:
         with:
           token: ${{ github.token }}
           tag: ${{ github.ref_name }}
-          files: CHANGES.md
+          files: cliff.toml
           title: ${{ github.ref_name }}
           notesFile: CHANGES.md
           draft: true

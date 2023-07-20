@@ -38,7 +38,7 @@ Optional release title.
 ### `notes`
 Optional release notes. You can provide multiline notes.
 
-### `notesFile`
+### `notes_file`
 Optional path to a file containing release notes. If provided, this will take precedence over notes.
 
 ### `draft`
@@ -50,7 +50,7 @@ Set to "true" to create a pre-release. Default is false.
 ### `latest`
 Set to "true" to mark this release as the latest. Default is false.
 
-### `discussionCategory`
+### `discussion_category`
 Optional discussion category for the release.
 
 ### `token`

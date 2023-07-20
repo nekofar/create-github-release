@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.21] - 2023-07-20
+
+### <!-- 02 -->Bug Fixes
+
+- Update script flags in `entrypoint.sh`
+
+### <!-- 05 -->Documentation
+
+- Update property names in `README.md`
+
+### <!-- 07 -->Continuous Integrations
+
+- Replace static notes with `CHANGES.md` in release workflow
+- Update `fetch-depth` in GitHub Actions workflow
+
 ## [1.0.0-alpha.20] - 2023-07-20
 
 ### <!-- 04 -->Refactor

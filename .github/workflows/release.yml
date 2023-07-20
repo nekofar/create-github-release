@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3.5.3
+        with:
+          fetch-depth: 0
 
       - name: Generate a changelog
         uses: orhun/git-cliff-action@v2.0.6
@@ -33,8 +35,6 @@ jobs:
           tag: ${{ github.ref_name }}
           files: cliff.toml
           title: ${{ github.ref_name }}
-          notes: |
-            This is the release notes for version ${{ github.ref }}.
-            Add any important information here.
+          notes_file: CHANGES.md
           draft: true
           prerelease: ${{ contains(github.ref_name, '-rc') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-alpha') }}

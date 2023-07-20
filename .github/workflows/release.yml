@@ -23,6 +23,9 @@ jobs:
         env:
           OUTPUT: CHANGES.md
 
+      - run: |
+          ls -la
+
       - name: Create Release
         uses: nekofar/create-github-release@develop
         with:

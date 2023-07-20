@@ -26,7 +26,10 @@ jobs:
       - name: Create Release
         uses: nekofar/create-github-release@develop
         with:
+          token: ${{ github.token }}
           tag: ${{ github.ref_name }}
+          files: CHANGES.md
           title: ${{ github.ref_name }}
           notesFile: CHANGES.md
           draft: true
+          prerelease: ${{ contains(github.ref_name, '-rc') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-alpha') }}

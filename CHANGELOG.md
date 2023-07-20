@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.3] - 2023-07-20
+
+### <!-- 02 -->Bug Fixes
+
+- Add shell definition in composite run
+
 ## [1.0.0-alpha.2] - 2023-07-20
 
 ### <!-- 07 -->Continuous Integrations

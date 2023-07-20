@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.6] - 2023-07-20
+
+### <!-- 02 -->Bug Fixes
+
+- Update `entrypoint.sh` file permissions
+
 ## [1.0.0-alpha.5] - 2023-07-20
 
 ### <!-- 02 -->Bug Fixes

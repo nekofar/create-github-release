@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-beta.1] - 2023-07-20
+
+### <!-- 07 -->Continuous Integrations
+
+- Add name to release step in GitHub Actions
+
 ## [1.0.0-alpha.22] - 2023-07-20
 
 ### <!-- 07 -->Continuous Integrations

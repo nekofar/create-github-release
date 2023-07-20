@@ -35,10 +35,10 @@ inputs:
         default: ${{ github.token }}
 
 runs:
-    using: 'composite'
+    using: composite
     steps:
-        - run: 'entrypoint.sh'
-          shell: 'bash'
+        - run: ${{ github.action_path }}/entrypoint.sh
+          shell: bash
           env:
               INPUT_TOKEN: ${{ inputs.token }}
               INPUT_TAG: ${{ inputs.tag }}

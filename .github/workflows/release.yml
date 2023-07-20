@@ -23,6 +23,9 @@ jobs:
         env:
           OUTPUT: CHANGES.md
 
+      - name: Print the changelog
+        run: cat "${{ steps.git-cliff.outputs.changelog }}"
+
       - name: Create Release
         uses: nekofar/create-github-release@develop
         with:

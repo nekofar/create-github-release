@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.19] - 2023-07-20
+
+### <!-- 07 -->Continuous Integrations
+
+- Add directory listing command to release workflow
+
 ## [1.0.0-alpha.18] - 2023-07-20
 
 ### <!-- 07 -->Continuous Integrations

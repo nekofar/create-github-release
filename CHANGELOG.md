@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.17] - 2023-07-20
+
+### <!-- 07 -->Continuous Integrations
+
+- Set prerelease flag in GitHub Actions workflow
+- Add github token to release workflow
+- Add CHANGES.md to release workflow
+
 ## [1.0.0-alpha.16] - 2023-07-20
 
 ### <!-- 07 -->Continuous Integrations

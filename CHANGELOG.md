@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.5] - 2023-07-20
+
+### <!-- 02 -->Bug Fixes
+
+- Update `action.yml` to use dynamic path for script
+
 ## [1.0.0-alpha.4] - 2023-07-20
 
 ### <!-- 02 -->Bug Fixes

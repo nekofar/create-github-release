@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.10] - 2023-07-20
+
+### <!-- 04 -->Refactor
+
+- Add verbose mode to entrypoint.sh script
+
 ## [1.0.0-alpha.9] - 2023-07-20
 
 ### <!-- 04 -->Refactor

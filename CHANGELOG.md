@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.12] - 2023-07-20
+
+### <!-- 02 -->Bug Fixes
+
+- Clear `GITHUB_TOKEN` in `entrypoint.sh`
+
 ## [1.0.0-alpha.11] - 2023-07-20
 
 ### <!-- 04 -->Refactor

@@ -1,0 +1,51 @@
+name: 'Create GitHub Release'
+description: 'GitHub Action to create a new release with optional notes and files'
+author: 'nekofar'
+inputs:
+    tag:
+        description: 'The tag name for the release (e.g., v1.0.0)'
+        required: true
+    files:
+        description: 'Optional files to include in the release'
+        required: false
+    title:
+        description: 'Optional release title'
+        required: false
+    notes:
+        description: 'Optional release notes'
+        required: false
+    notesFile:
+        description: 'Optional path to a file containing release notes'
+        required: false
+    draft:
+        description: 'Set to "true" to create a draft release'
+        required: false
+    prerelease:
+        description: 'Set to "true" to create a pre-release'
+        required: false
+    latest:
+        description: 'Set to "true" to mark this release as the latest'
+        required: false
+    discussionCategory:
+        description: 'Optional discussion category for the release'
+        required: false
+    token:
+        description: 'GitHub token to authenticate with the repository. Default: ${{ github.token }}'
+        required: false
+        default: ${{ github.token }}
+runs:
+    using: 'composite'
+    steps:
+        - run: 'entrypoint.sh'
+          env:
+              INPUT_TOKEN: ${{ inputs.token }}
+              INPUT_TAG: ${{ inputs.tag }}
+              INPUT_FILES: ${{ inputs.files }}
+              INPUT_TITLE: ${{ inputs.title }}
+              INPUT_NOTES: ${{ inputs.notes }}
+              INPUT_NOTES_FILE: ${{ inputs.notesFile }}
+              INPUT_DRAFT: ${{ inputs.draft }}
+              INPUT_LATEST: ${{ inputs.latest }}
+              INPUT_PRERELEASE: ${{ inputs.prerelease }}
+              INPUT_DISCUSSION_CATEGORY: ${{ inputs.discussionCategory }}
+

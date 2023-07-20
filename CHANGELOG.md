@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.22] - 2023-07-20
+
+### <!-- 07 -->Continuous Integrations
+
+- Add Shellcheck job to GitHub release workflow
+
 ## [1.0.0-alpha.21] - 2023-07-20
 
 ### <!-- 02 -->Bug Fixes

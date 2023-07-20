@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.15] - 2023-07-20
+
+### <!-- 04 -->Refactor
+
+- Update argument addition in `entrypoint.sh`
+
 ## [1.0.0-alpha.14] - 2023-07-20
 
 ### <!-- 07 -->Continuous Integrations

@@ -14,7 +14,7 @@ inputs:
     notes:
         description: 'Optional release notes'
         required: false
-    notesFile:
+    notes_file:
         description: 'Optional path to a file containing release notes'
         required: false
     draft:
@@ -26,7 +26,7 @@ inputs:
     latest:
         description: 'Set to "true" to mark this release as the latest'
         required: false
-    discussionCategory:
+    discussion_category:
         description: 'Optional discussion category for the release'
         required: false
     token:
@@ -45,9 +45,8 @@ runs:
               INPUT_FILES: ${{ inputs.files }}
               INPUT_TITLE: ${{ inputs.title }}
               INPUT_NOTES: ${{ inputs.notes }}
-              INPUT_NOTES_FILE: ${{ inputs.notesFile }}
+              INPUT_NOTES_FILE: ${{ inputs.notes_file }}
               INPUT_DRAFT: ${{ inputs.draft }}
               INPUT_LATEST: ${{ inputs.latest }}
               INPUT_PRERELEASE: ${{ inputs.prerelease }}
-              INPUT_DISCUSSION_CATEGORY: ${{ inputs.discussionCategory }}
-
+              INPUT_DISCUSSION_CATEGORY: ${{ inputs.discussion_category }}

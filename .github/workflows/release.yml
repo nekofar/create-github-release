@@ -23,8 +23,8 @@ jobs:
         env:
           OUTPUT: CHANGES.md
 
-      - run: |
-          ls -la
+      - name: Print the changelog
+        run: cat "${{ steps.git-cliff.outputs.changelog }}"
 
       - name: Create Release
         uses: nekofar/create-github-release@develop
@@ -33,6 +33,8 @@ jobs:
           tag: ${{ github.ref_name }}
           files: cliff.toml
           title: ${{ github.ref_name }}
-          notesFile: CHANGES.md
+          notes: |
+            This is the release notes for version ${{ github.ref }}.
+            Add any important information here.
           draft: true
           prerelease: ${{ contains(github.ref_name, '-rc') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-alpha') }}

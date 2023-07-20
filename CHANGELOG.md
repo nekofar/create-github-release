@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.8] - 2023-07-20
+
+### <!-- 04 -->Refactor
+
+- Add safety flags to Bash script
+
+### <!-- 07 -->Continuous Integrations
+
+- Update GitHub release action
+
 ## [1.0.0-alpha.7] - 2023-07-20
 
 ### <!-- 02 -->Bug Fixes

@@ -3,6 +3,9 @@
 # Bail on first non-zero exit status, and bail if any referenced variable is unset.
 set -eux
 
+# Clear the GITHUB_TOKEN environment variable
+unset GITHUB_TOKEN
+
 # Function to add non-empty arguments to the array
 function add_argument {
   if [ -n "$1" ]; then

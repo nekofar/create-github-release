@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Clear the GITHUB_TOKEN environment variable
+unset GITHUB_TOKEN
+
 # Check if both title and notes are not provided, then use --generate-notes flag
 generate_notes_flag=""
 if [[ -z "$INPUT_TITLE" && -z "$INPUT_NOTES" && -z "$INPUT_NOTESFILE" ]]; then

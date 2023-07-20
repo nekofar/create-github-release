@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create Release
-        uses: nekofar/create-github-release@v1
+        uses: nekofar/create-github-release@develop
         with:
           tag: ${{ github.ref }}
           draft: true

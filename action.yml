@@ -1,4 +1,4 @@
-name: 'Create GitHub Release'
+name: 'Automate GitHub Releases'
 description: 'GitHub Action to create a new release with optional notes and files'
 author: 'nekofar'
 inputs:

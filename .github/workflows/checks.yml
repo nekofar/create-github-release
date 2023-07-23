@@ -1,0 +1,18 @@
+# This is the name of your workflow
+name: Run Checks
+
+# The workflow is triggers on every push and pull_request event
+on: [push, pull_request]
+
+jobs:
+  shellcheck:
+    name: Execute ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3.5.3
+
+      # Runs ShellCheck on all shell scripts in your repository
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master

@@ -24,6 +24,13 @@ if [[ -z "$INPUT_TITLE" ]]; then
   INPUT_TITLE="$INPUT_TAG"
 fi
 
+# A GitHub token should be exactly 40 hexadecimal characters.
+# If it's not, an error message outputs and the script exits.
+if ! [[ "$INPUT_TOKEN" =~ ^[a-fA-F0-9]{40}$ ]]; then
+  echo "Error: 'token' input does not appear to be a valid GitHub token."
+  exit 1
+fi
+
 # Check if both notes and notes file are not provided.
 generate_notes_flag=""
 if [[ -z "$INPUT_NOTES" && -z "$INPUT_NOTES_FILE" ]]; then

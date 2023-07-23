@@ -1,6 +1,9 @@
-name: 'Create GitHub Release'
+name: 'Automate GitHub Releases'
 description: 'GitHub Action to create a new release with optional notes and files'
 author: 'nekofar'
+branding:
+    icon: 'tag'
+    color: 'blue'
 inputs:
     tag:
         description: 'The tag name for the release (e.g., v1.0.0)'

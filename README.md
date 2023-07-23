@@ -11,83 +11,59 @@ GitHub Action to create a new release with optional notes and files.
 > **Warning**
 > Please note this is an experimental project and is currently under development. As such, it may not be suitable for use in production environments. Use at your own risk and discretion.
 
-## Inputs
-
-### `tag` (required)
-
-The tag name for the release (e.g., v1.0.0).
-
-### `files`
-
-Optional files to include in the release. You can provide the files in a single line or multiple lines. Examples:
-
-```yaml
-# Single line format
-files: somefile somefolder/*
-```
-```yaml
-# Multiple lines format
-files: |
-    somefile
-    somefolder/*
-```
-
-### `title`
-Optional release title.
-
-### `notes`
-Optional release notes. You can provide multiline notes.
-
-### `notes_file`
-Optional path to a file containing release notes. If provided, this will take precedence over notes.
-
-### `draft`
-Set to "true" to create a draft release. Default is false.
-
-### `prerelease`
-Set to "true" to create a pre-release. Default is false.
-
-### `latest`
-Set to "true" to mark this release as the latest. Default is false.
-
-### `discussion_category`
-Optional discussion category for the release.
-
-### `token`
-GitHub token to authenticate with the repository. Default: ${{ github.token }}. If not provided, it will use the repository's default token for authentication.
 
 ## Example Usage
 
 ```yaml
+# This workflow is named "Create Release"
 name: Create Release
 
+# The workflow is triggered on push events with tags that start with 'v'
 on:
-    push:
+  push:
     tags:
-      - 'v*' # Create a release for tags starting with 'v'
+      - 'v*'
 
 jobs:
-    create_release:
+  create_release:
+    # Runs the job on the latest Ubuntu version
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
     
+    steps:
+      # Checks out a copy of your repository
+      - name: Checkout code
+        uses: actions/checkout@v2 
+
       - name: Create Release
+        # Uses the create-github-release action
         uses: nekofar/create-github-release@v1
         with:
-            tag: ${{ github.ref }}
-            files: |
-              dist/release-assets/*
-            title: Release ${{ github.ref }}
-            notes: |
-              This is the release notes for version ${{ github.ref }}.
-              Add any important information here.
-            draft: false
-            prerelease: false
-            latest: true
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Defines the tag name for the release (e.g., v1.0.0).
+          tag: ${{ github.ref_name }}  
+          
+          # (Optional) Files to include in the release
+          files: |  
+            dist/release-assets/*  
+            
+          # (Optional) Defines the title of the release
+          title: Release ${{ github.ref_name }}  
+          
+          # (Optional) Allows multiline release notes
+          notes: |  
+            This is the release notes for version ${{ github.ref_name }}.
+            Add any important information here.
+            
+          # (Optional) Set to "true" to create a draft release. Default is "false"
+          draft: false  
+          
+          # (Optional) Set to "true" to create a pre-release. Default is "false"
+          prerelease: false  
+          
+          # (Optional) Set to "true" to mark this release as the latest. Default is "false"
+          latest: true  
+          
+          # (Optional) GitHub token for authentication. Default: ${{ github.token }}. If not provided, it will use the repository's default token
+          token: ${{ github.token }}          
 ```
 
 ## License

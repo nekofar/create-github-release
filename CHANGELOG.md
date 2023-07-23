@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [develop] - 2023-07-23
+
+### <!-- 02 -->Bug Fixes
+
+- Update GitHub token validation in `entrypoint.sh`
+
+### <!-- 07 -->Continuous Integrations
+
+- Update GitHub release creation action version
+
 ## [1.0.3] - 2023-07-23
 
 ### <!-- 05 -->Documentation

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2023-07-23
+
+### <!-- 07 -->Continuous Integrations
+
+- Refactor GitHub Actions workflows
+
 ## [1.0.1] - 2023-07-23
 
 ### <!-- 04 -->Refactor

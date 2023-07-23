@@ -28,6 +28,7 @@ jobs:
 
       # In the final step, we extract the major version from the tag name and push a new tag with this version
       - name: Get and push Major version
+        if: ${{ !github.event.release.prerelease }}
         run: |
           # Parse the release version and extract major version. The tag name is in the format 'vX.Y.Z'
           # We use the 'cut' command to extract the first field 

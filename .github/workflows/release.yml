@@ -2,10 +2,10 @@
 # and create a new tag with just the major version.
 name: Publish Release
 
-# The workflow is triggered when a release is published
+# The workflow is triggered when a release is prereleased or released
 on:
   release:
-    types: [ published ]
+    types: [prereleased, released]
 
 # The workflow consists of a single job named `release`
 jobs:

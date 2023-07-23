@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2023-07-23
+
+### <!-- 04 -->Refactor
+
+- Set default title to tag in entrypoint script
+- Add validation for GitHub token in `entrypoint.sh`
+
+### <!-- 07 -->Continuous Integrations
+
+- Update release creation action version
+- Update release trigger events in Github Actions
+
 ## [1.0.0-beta.7] - 2023-07-23
 
 ### <!-- 07 -->Continuous Integrations

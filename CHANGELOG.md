@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-beta.3] - 2023-07-23
+
+### <!-- 05 -->Documentation
+
+- Refactor README.md for clarity and simplify inputs section
+- Add configuration options to README
+- Refactor README and add CONTRIBUTING guide
+
+### <!-- 07 -->Continuous Integrations
+
+- Add separate workflows for preparation, release, and checks
+
 ## [1.0.0-beta.2] - 2023-07-20
 
 ### <!-- 07 -->Continuous Integrations

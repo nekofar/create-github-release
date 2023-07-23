@@ -24,9 +24,9 @@ if [[ -z "$INPUT_TITLE" ]]; then
   INPUT_TITLE="$INPUT_TAG"
 fi
 
-# A GitHub token should be exactly 40 hexadecimal characters.
+# Check if a given GitHub token could be valid
 # If it's not, an error message outputs and the script exits.
-if ! [[ "$INPUT_TOKEN" =~ ^[a-fA-F0-9]{40}$ ]]; then
+if ! [[ "$INPUT_TOKEN" =~ ^(gh[ps]_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})$ ]]; then
   echo "Error: 'token' input does not appear to be a valid GitHub token."
   exit 1
 fi

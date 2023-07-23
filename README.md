@@ -66,5 +66,22 @@ jobs:
           token: ${{ github.token }}          
 ```
 
+## Configuration Options
+
+The configuration used in the GitHub Action workflow includes several options for customization. Each of these configuration options has a specific use and can be tailored to suit your specific workflow needs. Below is a table depicting these options:
+
+| Option | Description |
+| --- | --- |
+| `tag` | This defines the tag name for the release (e.g., v1.0.0). |
+| `files` | (Optional) This specifies any files that you wish to include in the release. |
+| `title` | (Optional) This defines the title of the release. |
+| `notes` | (Optional) This allows multiline release notes. |
+| `draft` | (Optional) This can be set to "true" to create a draft release. The default is "false". |
+| `prerelease` | (Optional) This can be set to "true" to create a pre-release. The default is "false". |
+| `latest` | (Optional) This can be set to "true" to mark this release as the latest. The default is "false". |
+| `token` | (Optional) This is the GitHub token for authentication. The default is `github.token`. If not provided, it will use the repository's default token. |
+
+Each option should be carefully considered to ensure that your workflow proceeds as expected.
+
 ## License
 This project is licensed under the [MIT License](LICENSE).

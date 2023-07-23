@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2023-07-23
+
+### <!-- 05 -->Documentation
+
+- Remove experimental warning in README
+
 ## [1.0.2] - 2023-07-23
 
 ### <!-- 07 -->Continuous Integrations

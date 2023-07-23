@@ -13,6 +13,7 @@ jobs:
 
     # The job is run on the latest Ubuntu environment
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
 
       # First, we check out the repository code

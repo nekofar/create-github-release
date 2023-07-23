@@ -1,7 +1,7 @@
 # Create GitHub Release Action
 
 [![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/nekofar/create-github-release?include_prereleases)](https://github.com/nekofar/create-github-release/releases)
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/nekofar/create-github-release/checks.yml)](https://github.com/nekofar/create-github-release/actions/workflows/checks.yml)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/nekofar/create-github-release/prepare.yml)](https://github.com/nekofar/create-github-release/actions/workflows/prepare.yml)
 [![GitHub](https://img.shields.io/github/license/nekofar/create-github-release)](https://github.com/nekofar/create-github-release/blob/master/LICENSE)
 [![Twitter Follow](https://img.shields.io/badge/follow-%40nekofar-1DA1F2?logo=twitter&style=flat)](https://twitter.com/nekofar)
 [![Donate](https://img.shields.io/badge/donate-nekofar.crypto-a2b9bc?logo=ko-fi&logoColor=white)](https://ud.me/nekofar.crypto)

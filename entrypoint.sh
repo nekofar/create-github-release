@@ -19,9 +19,14 @@ if [ -z "$INPUT_TAG" ]; then
   exit 1
 fi
 
-# Check if both title, notes, and notes file are not provided.
+# Set title equal to the tag if no title is provided.
+if [[ -z "$INPUT_TITLE" ]]; then
+  INPUT_TITLE="$INPUT_TAG"
+fi
+
+# Check if both notes and notes file are not provided.
 generate_notes_flag=""
-if [[ -z "$INPUT_TITLE" && -z "$INPUT_NOTES" && -z "$INPUT_NOTES_FILE" ]]; then
+if [[ -z "$INPUT_NOTES" && -z "$INPUT_NOTES_FILE" ]]; then
   generate_notes_flag="--generate-notes"
 fi
 

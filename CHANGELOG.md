@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-beta.7] - 2023-07-23
+
+### <!-- 07 -->Continuous Integrations
+
+- Optimize changelog and GitHub release workflow in `prepare.yml`
+
 ## [1.0.0-beta.6] - 2023-07-23
 
 ### <!-- 07 -->Continuous Integrations

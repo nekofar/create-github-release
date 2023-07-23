@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-beta.4] - 2023-07-23
+
+### <!-- 07 -->Continuous Integrations
+
+- Remove `check` dependency from `draft` job
+
 ## [1.0.0-beta.3] - 2023-07-23
 
 ### <!-- 05 -->Documentation

@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [develop] - 2023-07-23
+## [1.0.5] - 2023-07-23
+
+### <!-- 05 -->Documentation
+
+- Update name of action on `action.yml` 
+- Add branding to the GitHub Action
+
+## [1.0.4] - 2023-07-23
 
 ### <!-- 02 -->Bug Fixes
 

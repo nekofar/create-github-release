@@ -1,51 +1,42 @@
-name: Create Release
+# This GitHub Workflow is used to extract the major version from the release tag
+# and create a new tag with just the major version.
+name: Publish Release
 
+# The workflow is triggered when a release is published
 on:
-  push:
-    tags:
-      - 'v*' # Create a release for tags starting with 'v'
-
-jobs:
-  check:
-    name: Shellcheck
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3.5.3
-
-      - name: Run ShellCheck
-        uses: ludeeus/action-shellcheck@master
-
   release:
-    name: Draft a release
+    types: [ published ]
+
+# The workflow consists of a single job named `release`
+jobs:
+  release:
+
+    # The job is run on the latest Ubuntu environment
     runs-on: ubuntu-latest
-    needs: [ check ]
-    permissions:
-      contents: write
     steps:
+
+      # First, we check out the repository code
       - name: Checkout code
-        uses: actions/checkout@v3.5.3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v2
 
-      - name: Generate a changelog
-        uses: orhun/git-cliff-action@v2.0.6
-        id: git-cliff
-        with:
-          config: cliff.toml
-          args: -vv --latest --strip all
-        env:
-          OUTPUT: CHANGES.md
+      # In the next step, we configure the git user to allow pushing to the repository
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
 
-      - name: Print the changelog
-        run: cat "${{ steps.git-cliff.outputs.changelog }}"
+      # In the final step, we extract the major version from the tag name and push a new tag with this version
+      - name: Get and push Major version
+        run: |
+          # Parse the release version and extract major version. The tag name is in the format 'vX.Y.Z'
+          # We use the 'cut' command to extract the first field 
+          TAG_NAME=${{ github.event.release.tag_name }}
+          MAJOR_VERSION=$(echo $TAG_NAME | cut -d. -f1)
+          echo "Major version is $MAJOR_VERSION"
 
-      - name: Create Release
-        uses: nekofar/create-github-release@develop
-        with:
-          token: ${{ github.token }}
-          tag: ${{ github.ref_name }}
-          title: ${{ github.ref_name }}
-          notes_file: CHANGES.md
-          draft: true
-          prerelease: ${{ contains(github.ref_name, '-rc') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-alpha') }}
+          # Overwrite the tag that just includes the major version
+          git tag -fa "$MAJOR_VERSION" -m "Release $MAJOR_VERSION"
+
+          # We force push the tag to the origin repository.
+          # Note: Be careful with 'force push' as it can overwrite things!
+          git push --force origin refs/tags/$MAJOR_VERSION

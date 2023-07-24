@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2023-07-24
+
+### <!-- 05 -->Documentation
+
+- Add GitHub issue templates for bugs and feature requests
+- Add funding information to the project
+
+### <!-- 07 -->Continuous Integrations
+
+- Add dependabot configuration for GitHub Actions
+- Add Stale Bot configuration file
+
 ## [1.0.5] - 2023-07-23
 
 ### <!-- 05 -->Documentation

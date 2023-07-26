@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.8] - 2023-07-26
+
+### <!-- 02 -->Bug Fixes
+
+- Update conditional check in `entrypoint.sh`
+
 ## [1.0.7] - 2023-07-26
 
 ### <!-- 02 -->Bug Fixes

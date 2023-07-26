@@ -3,9 +3,6 @@
 # Bail on first non-zero exit status, and bail if any referenced variable is unset.
 set -eu
 
-# Clear the GITHUB_TOKEN environment variable
-unset GITHUB_TOKEN
-
 # Function to add non-empty arguments to the array
 add_argument() {
   if [ -n "$1" ]; then
@@ -31,6 +28,9 @@ if ! echo "$INPUT_TOKEN" | grep -E '^(gh[ps]_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0
   exit 1
 fi
 
+# Setting GitHub token as environment variable
+export GITHUB_TOKEN=${INPUT_TOKEN:-"GITHUB_TOKEN"}
+
 # Check if both notes and notes file are not provided.
 generate_notes_flag=""
 if [ -z "$INPUT_NOTES" -a -z "$INPUT_NOTES_FILE" ]; then
@@ -41,9 +41,6 @@ fi
 draft_flag=$([ "$INPUT_DRAFT" = "true" ] && echo "--draft" || echo "")
 prerelease_flag=$([ "$INPUT_PRERELEASE" = "true" ] && echo "--prerelease" || echo "")
 latest_flag=$([ "$INPUT_LATEST" = "true" ] && echo "--latest" || echo "")
-
-# Use the provided token or GITHUB_TOKEN for authentication
-echo "$INPUT_TOKEN" | gh auth login --with-token
 
 # Prepare the arguments for gh release create command
 arguments=()

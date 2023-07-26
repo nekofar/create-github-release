@@ -33,7 +33,7 @@ export GITHUB_TOKEN=${INPUT_TOKEN:-$GITHUB_TOKEN}
 
 # Check if both notes and notes file are not provided.
 generate_notes_flag=""
-if [ -z "$INPUT_NOTES" -a -z "$INPUT_NOTES_FILE" ]; then
+if [[ -z "$INPUT_NOTES" && -z "$INPUT_NOTES_FILE" ]]; then
   generate_notes_flag="--generate-notes"
 fi
 

@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.7] - 2023-07-26
+
+### <!-- 02 -->Bug Fixes
+
+- Update environment variable assignment in `entrypoint.sh`
+
+### <!-- 04 -->Refactor
+
+- Update `entrypoint.sh` for better compatibility and readability
+- Update handling of GitHub token in entrypoint.sh
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/checkout from 2 to 3 
+
 ## [1.0.6] - 2023-07-24
 
 ### <!-- 05 -->Documentation

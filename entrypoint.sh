@@ -12,7 +12,7 @@ add_argument() {
 
 # Check for missing required parameters
 if [ -z "$INPUT_TAG" ]; then
-  echo "Error: 'tag' input is required but not provided."
+  echo -e "\033[0;31mError: 'tag' input is required but not provided.\033[0m"
   exit 1
 fi
 
@@ -24,7 +24,7 @@ fi
 # Check if a given GitHub token could be valid
 # If it's not, an error message outputs and the script exits.
 if ! echo "$INPUT_TOKEN" | grep -E '^(gh[ps]_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})$' >/dev/null; then
-  echo "Error: 'token' input does not appear to be a valid GitHub token."
+  echo -e "\033[0;31mError: 'token' input does not appear to be a valid GitHub token.\033[0m"
   exit 1
 fi
 

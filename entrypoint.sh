@@ -7,9 +7,9 @@ set -eu
 unset GITHUB_TOKEN
 
 # Function to add non-empty arguments to the array
-function add_argument {
+add_argument() {
   if [ -n "$1" ]; then
-    arguments+=("$2")
+    arguments[${#arguments[@]}]="$2"
   fi
 }
 
@@ -20,20 +20,20 @@ if [ -z "$INPUT_TAG" ]; then
 fi
 
 # Set title equal to the tag if no title is provided.
-if [[ -z "$INPUT_TITLE" ]]; then
+if [ -z "$INPUT_TITLE" ]; then
   INPUT_TITLE="$INPUT_TAG"
 fi
 
 # Check if a given GitHub token could be valid
 # If it's not, an error message outputs and the script exits.
-if ! [[ "$INPUT_TOKEN" =~ ^(gh[ps]_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})$ ]]; then
+if ! echo "$INPUT_TOKEN" | grep -E '^(gh[ps]_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})$' >/dev/null; then
   echo "Error: 'token' input does not appear to be a valid GitHub token."
   exit 1
 fi
 
 # Check if both notes and notes file are not provided.
 generate_notes_flag=""
-if [[ -z "$INPUT_NOTES" && -z "$INPUT_NOTES_FILE" ]]; then
+if [ -z "$INPUT_NOTES" -a -z "$INPUT_NOTES_FILE" ]; then
   generate_notes_flag="--generate-notes"
 fi
 
@@ -43,7 +43,7 @@ prerelease_flag=$([ "$INPUT_PRERELEASE" = "true" ] && echo "--prerelease" || ech
 latest_flag=$([ "$INPUT_LATEST" = "true" ] && echo "--latest" || echo "")
 
 # Use the provided token or GITHUB_TOKEN for authentication
-gh auth login --with-token <<< "$INPUT_TOKEN"
+echo "$INPUT_TOKEN" | gh auth login --with-token
 
 # Prepare the arguments for gh release create command
 arguments=()

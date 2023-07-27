@@ -26,7 +26,7 @@ jobs:
     steps:
       # Checks-out the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.5.3
 
       # Runs ShellCheck on all shell scripts in your repository
       - name: Run ShellCheck
@@ -41,7 +41,7 @@ jobs:
     steps:
       # Checkout the repository code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.5.3
         with:
           fetch-depth: 0 # Fetches all history for all branches and tags
 
@@ -73,7 +73,7 @@ jobs:
 
       # Create a new GitHub release using the gathered information
       - name: Create the release
-        uses: nekofar/create-github-release@develop
+        uses: nekofar/create-github-release@v1.0.8
         with:
           token: ${{ github.token }} # Authentication token from GitHub
           tag: ${{ github.ref_name }} # The name of the tag to be released

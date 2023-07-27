@@ -40,7 +40,8 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: ${{ github.action_path }}/entrypoint.sh
+    - name: Run release script
+      run: ${{ github.action_path }}/entrypoint.sh
       shell: bash
       env:
         INPUT_TOKEN: ${{ inputs.token }}

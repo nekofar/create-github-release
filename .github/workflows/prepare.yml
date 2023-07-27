@@ -20,7 +20,7 @@ jobs:
           threshold: 70
 
   lint:
-    name: Code linting
+    name: Code quality
     runs-on: ubuntu-latest
     needs: [ guard ]
     steps:

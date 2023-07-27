@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.9] - 2023-07-27
+
+### <!-- 04 -->Refactor
+
+- Add color to error messages in `entrypoint.sh`
+- Updated indentation in `action.yml` for clarity
+- Add debug mode to the entrypoint bash script
+
 ## [1.0.8] - 2023-07-26
 
 ### <!-- 02 -->Bug Fixes

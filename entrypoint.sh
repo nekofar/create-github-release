@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Bail on first non-zero exit status, and bail if any referenced variable is unset.
+# Making sure the script stops if any of the commands fails
 set -eu
+
+# Enable debug mode if RUNNER_DEBUG is 1
+[[ "${RUNNER_DEBUG:-0}" -eq 1 ]] && set -x
 
 # Function to add non-empty arguments to the array
 add_argument() {

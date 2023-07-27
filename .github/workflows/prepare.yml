@@ -6,13 +6,27 @@ on:
       - 'v*' # Create a release for tags starting with 'v'
 
 jobs:
-  lint:
-    name: Code linting
+  guard:
+    name: Usage guard
     runs-on: ubuntu-latest
+    steps:
+      # Uses the action-usage-guard action
+      - name: Run Action Usage Guard
+        uses: nekofar/action-usage-guard@develop
+        with:
+          # GitHub access token for authentication.
+          token: ${{ secrets.ACCESS_TOKEN }}
+          # Defines the threshold for the usage guard.
+          threshold: 70
+
+  lint:
+    name: Code quality
+    runs-on: ubuntu-latest
+    needs: [ guard ]
     steps:
       # Checks-out the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.5.3
 
       # Runs ShellCheck on all shell scripts in your repository
       - name: Run ShellCheck
@@ -27,7 +41,7 @@ jobs:
     steps:
       # Checkout the repository code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.5.3
         with:
           fetch-depth: 0 # Fetches all history for all branches and tags
 
@@ -59,7 +73,7 @@ jobs:
 
       # Create a new GitHub release using the gathered information
       - name: Create the release
-        uses: nekofar/create-github-release@develop
+        uses: nekofar/create-github-release@v1.0.8
         with:
           token: ${{ github.token }} # Authentication token from GitHub
           tag: ${{ github.ref_name }} # The name of the tag to be released

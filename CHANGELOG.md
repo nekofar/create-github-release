@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.11] - 2023-07-27
+
+### <!-- 07 -->Continuous Integrations
+
+- Add usage guard to prepare workflow
+- Update workflow job name for clarity
+- Update Github actions to use specific versions
+
 ## [1.0.10] - 2023-07-27
 
 ### <!-- 04 -->Refactor

@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.12] - 2023-07-29
+
+### <!-- 02 -->Bug Fixes
+
+- Remove export from `GITHUB_TOKEN` setting
+
+### <!-- 04 -->Refactor
+
+- Trim input token and authenticate GitHub CLI
+
+### <!-- 07 -->Continuous Integrations
+
+- Update GitHub release action reference in workflow
+
 ## [1.0.11] - 2023-07-27
 
 ### <!-- 07 -->Continuous Integrations

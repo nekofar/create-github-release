@@ -32,7 +32,7 @@ if ! echo "$INPUT_TOKEN" | grep -E '^(gh[ps]_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0
 fi
 
 # Setting GitHub token as environment variable
-export GITHUB_TOKEN=${INPUT_TOKEN:-$GITHUB_TOKEN}
+GITHUB_TOKEN=${INPUT_TOKEN:-$GITHUB_TOKEN}
 
 # Check if both notes and notes file are not provided.
 generate_notes_flag=""

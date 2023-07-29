@@ -31,8 +31,11 @@ if ! echo "$INPUT_TOKEN" | grep -E '^(gh[ps]_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0
   exit 1
 fi
 
-# Setting GitHub token as environment variable
-GITHUB_TOKEN=${INPUT_TOKEN:-$GITHUB_TOKEN}
+# Trimming white spaces from input token
+INPUT_TOKEN=$(echo "$INPUT_TOKEN" | xargs)
+
+# Authenticates GitHub CLI using a supplied token
+echo "${INPUT_TOKEN}" | gh auth login --with-token
 
 # Check if both notes and notes file are not provided.
 generate_notes_flag=""

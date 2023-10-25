@@ -18,7 +18,7 @@ jobs:
 
       # First, we check out the repository code
       - name: Checkout code
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v4.1.1
 
       # In the next step, we configure the git user to allow pushing to the repository
       - name: Configure Git

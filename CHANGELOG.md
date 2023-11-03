@@ -2,23 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.13] - 2023-11-03
+
+### Bug Fixes
+
+- Solve some minor issues and update dependencies
+
 ## [1.0.12] - 2023-07-29
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Remove export from `GITHUB_TOKEN` setting
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Trim input token and authenticate GitHub CLI
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Update GitHub release action reference in workflow
 
 ## [1.0.11] - 2023-07-27
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add usage guard to prepare workflow
 - Update workflow job name for clarity
@@ -26,13 +32,13 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.10] - 2023-07-27
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Improve entrypoint script execution in `action.yml`
 
 ## [1.0.9] - 2023-07-27
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Add color to error messages in `entrypoint.sh`
 - Updated indentation in `action.yml` for clarity
@@ -40,155 +46,151 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.8] - 2023-07-26
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Update conditional check in `entrypoint.sh`
 
 ## [1.0.7] - 2023-07-26
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Update environment variable assignment in `entrypoint.sh`
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Update `entrypoint.sh` for better compatibility and readability
 - Update handling of GitHub token in entrypoint.sh
 
-### <!-- 07 -->Continuous Integrations
-
-- Bump actions/checkout from 2 to 3 
-
 ## [1.0.6] - 2023-07-24
 
-### <!-- 05 -->Documentation
+### Documentation
 
 - Add GitHub issue templates for bugs and feature requests
 - Add funding information to the project
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add dependabot configuration for GitHub Actions
 - Add Stale Bot configuration file
 
-## [1.0.5] - 2023-07-23
+## [1] - 2023-07-23
 
-### <!-- 05 -->Documentation
+### Documentation
 
-- Update name of action on `action.yml` 
+- Update name of action on `action.yml` (#1)
 - Add branding to the GitHub Action
 
 ## [1.0.4] - 2023-07-23
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Update GitHub token validation in `entrypoint.sh`
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Update GitHub release creation action version
 
 ## [1.0.3] - 2023-07-23
 
-### <!-- 05 -->Documentation
+### Documentation
 
 - Remove experimental warning in README
 
 ## [1.0.2] - 2023-07-23
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Refactor GitHub Actions workflows
 
 ## [1.0.1] - 2023-07-23
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Set default title to tag in entrypoint script
 - Add validation for GitHub token in `entrypoint.sh`
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Update release creation action version
 - Update release trigger events in Github Actions
 
 ## [1.0.0-beta.7] - 2023-07-23
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Optimize changelog and GitHub release workflow in `prepare.yml`
 
 ## [1.0.0-beta.6] - 2023-07-23
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Prevent major version tag on prerelease
 
 ## [1.0.0-beta.5] - 2023-07-23
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add write permissions to release workflow
 
 ## [1.0.0-beta.4] - 2023-07-23
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Remove `check` dependency from `draft` job
 
 ## [1.0.0-beta.3] - 2023-07-23
 
-### <!-- 05 -->Documentation
+### Documentation
 
 - Refactor README.md for clarity and simplify inputs section
 - Add configuration options to README
 - Refactor README and add CONTRIBUTING guide
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add separate workflows for preparation, release, and checks
 
 ## [1.0.0-beta.2] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Remove cliff.toml from release workflow
 
 ## [1.0.0-beta.1] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add name to release step in GitHub Actions
 
 ## [1.0.0-alpha.22] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add Shellcheck job to GitHub release workflow
 
 ## [1.0.0-alpha.21] - 2023-07-20
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Update script flags in `entrypoint.sh`
 
-### <!-- 05 -->Documentation
+### Documentation
 
 - Update property names in `README.md`
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Replace static notes with `CHANGES.md` in release workflow
 - Update `fetch-depth` in GitHub Actions workflow
 
 ## [1.0.0-alpha.20] - 2023-07-20
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Update variable names to follow underscore naming convention
 - Remove extra newline from `action.yml`
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Remove unnecessary commands from release workflow
 - Add step to print changelog in release workflow
@@ -197,19 +199,19 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.0-alpha.19] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add directory listing command to release workflow
 
 ## [1.0.0-alpha.18] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Change release file in GitHub workflows
 
 ## [1.0.0-alpha.17] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Set prerelease flag in GitHub Actions workflow
 - Add github token to release workflow
@@ -217,113 +219,113 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.0-alpha.16] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add changelog generation to release workflow
 
 ## [1.0.0-alpha.15] - 2023-07-20
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Update argument addition in `entrypoint.sh`
 
 ## [1.0.0-alpha.14] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Update actions/checkout version in GitHub workflow
 - Update release tag and title in Github Workflow
 
 ## [1.0.0-alpha.13] - 2023-07-20
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Add write permissions to release workflow
 
 ## [1.0.0-alpha.12] - 2023-07-20
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Clear `GITHUB_TOKEN` in `entrypoint.sh`
 
 ## [1.0.0-alpha.11] - 2023-07-20
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Update `entrypoint.sh` for readability and modularity
 
 ## [1.0.0-alpha.10] - 2023-07-20
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Add verbose mode to entrypoint.sh script
 
 ## [1.0.0-alpha.9] - 2023-07-20
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Update notes file variable for clarity
 - Update release flags-checking in `entrypoint.sh`
 
 ## [1.0.0-alpha.8] - 2023-07-20
 
-### <!-- 04 -->Refactor
+### Refactor
 
 - Add safety flags to Bash script
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Update GitHub release action
 
 ## [1.0.0-alpha.7] - 2023-07-20
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Clear `GITHUB_TOKEN` env var in `entrypoint.sh` script
 
-### <!-- 05 -->Documentation
+### Documentation
 
 - Add warning note to README
 
 ## [1.0.0-alpha.6] - 2023-07-20
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Update `entrypoint.sh` file permissions
 
 ## [1.0.0-alpha.5] - 2023-07-20
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Update `action.yml` to use dynamic path for script
 
 ## [1.0.0-alpha.4] - 2023-07-20
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Update token description in `action.yml`
 
 ## [1.0.0-alpha.3] - 2023-07-20
 
-### <!-- 02 -->Bug Fixes
+### Bug Fixes
 
 - Add shell definition in composite run
 
 ## [1.0.0-alpha.2] - 2023-07-20
 
-### <!-- 07 -->Continuous Integrations
+### Miscellaneous Tasks
 
 - Add GitHub action to create release
 
 ## [1.0.0-alpha.1] - 2023-07-20
 
-### <!-- 05 -->Documentation
+### Documentation
 
 - Update README with status badges
 
 ## [1.0.0-alpha.0] - 2023-07-20
 
-### <!-- 01 -->Features
+### Features
 
 - Add GitHub Release creation script and related documentation
 

@@ -73,7 +73,7 @@ All notable changes to this project will be documented in this file.
 - Add dependabot configuration for GitHub Actions
 - Add Stale Bot configuration file
 
-## [1] - 2023-07-23
+## [1.0.5] - 2023-07-23
 
 ### Documentation
 

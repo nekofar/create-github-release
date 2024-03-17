@@ -26,7 +26,7 @@ jobs:
     steps:
       # Checks-out the repository
       - name: Checkout code
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.2
 
       # Runs ShellCheck on all shell scripts in your repository
       - name: Run ShellCheck
@@ -41,7 +41,7 @@ jobs:
     steps:
       # Checkout the repository code
       - name: Checkout code
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.2
         with:
           fetch-depth: 0 # Fetches all history for all branches and tags
 

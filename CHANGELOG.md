@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.16] - 2026-06-24
+
+### Bug Fixes
+
+- Update token regex to match new formarts
+
 ## [1.0.15] - 2025-12-04
 
 ### Miscellaneous Tasks

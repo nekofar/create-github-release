@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.18] - 2026-06-24
+
+### Bug Fixes
+
+- Correct regular expression syntax for GitHub token validation
+
 ## [1.0.17] - 2026-06-24
 
 ### Bug Fixes
